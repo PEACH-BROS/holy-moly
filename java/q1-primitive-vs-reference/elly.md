@@ -46,7 +46,7 @@
   String host = "localhost"; //참조 타입: 디버깅해보면 String@782와 같은 값이 들어있다.~~(그래야 하는데?! )~~
   ```
 
-  ![image-20200601032605070](/Users/yebin/Library/Application Support/typora-user-images/image-20200601032605070.png)
+  ![image](https://user-images.githubusercontent.com/19922698/83360635-9f996c80-a3bd-11ea-8d82-aefe80bcee83.png)
 
 - null이 될 수 있다.
 
