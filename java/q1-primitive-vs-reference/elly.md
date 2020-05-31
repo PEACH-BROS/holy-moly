@@ -35,6 +35,8 @@
 
 
 
+
+
 ### 참조 타입
 
 - 배열, 열거 타입, 클래스, 인터페이스 등이 포함된다. (원시 타입을 제외한 나머지)
@@ -46,7 +48,7 @@
   String host = "localhost"; //참조 타입: 디버깅해보면 String@782와 같은 값이 들어있다.~~(그래야 하는데?! )~~
   ```
 
-  ![image](https://user-images.githubusercontent.com/19922698/83360635-9f996c80-a3bd-11ea-8d82-aefe80bcee83.png)
+  ![image](https://user-images.githubusercontent.com/19922698/83361139-682cbf00-a3c1-11ea-8aa3-641aaf3fd92e.png)
 
 - null이 될 수 있다.
 
