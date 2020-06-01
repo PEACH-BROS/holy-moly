@@ -7,5 +7,5 @@
 
 ## TDD
 
-- [TDD에 대해 설명해 주세요](tdd/q1-stength-and-weakness/README.md)
+- [TDD에 대해 설명해 주세요](tdd/q1-strength-and-weakness/README.md)
 
