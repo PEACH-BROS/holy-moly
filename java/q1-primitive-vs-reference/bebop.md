@@ -35,4 +35,3 @@ public class MemberUpdateRequest{
 
 DB에 `memberId`가 auto increment 로 설정이 되어 있다고 해서 `memberId`가 0인 회원을 insert할 수 없는것은 아니다.  
 또한 DB의 auto increment가 1부터 시작한다는 것과 `memberId`가 0인 요청이 발생할 수 있다는 것은 전혀 다른 문제이기도 하다.
-
