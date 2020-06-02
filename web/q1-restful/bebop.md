@@ -70,5 +70,6 @@ REST가 Uniform Interface를 필요로 하는 이유는 Server와 Client의 독�
 > 참고  
 >
 > https://www.youtube.com/watch?v=RP_f5dMoHFc  
-> https://meetup.toast.com/posts/92
+> https://meetup.toast.com/posts/92  
+> https://docs.microsoft.com/ko-kr/azure/architecture/best-practices/api-design
 
