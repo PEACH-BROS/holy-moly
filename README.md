@@ -13,3 +13,6 @@
 
 - [RESTful이란?](web/q1-restful/README.md)
 
+## CS
+
+- [인터프리터 언어 vs 컴파일러 언어](cs/q1-interpreter-language-vs-compiler-language/README.md)
