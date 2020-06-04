@@ -15,4 +15,4 @@
 
 ## CS
 
-- [인터프리터 언어 vs 컴파일러 언어](cs/q1-interpreter-language-vs-compiler-language/README.md)
+- [인터프리터 언어 vs 컴파일러 언어](cs/q1-interpreter-vs-compiler/README.md)
