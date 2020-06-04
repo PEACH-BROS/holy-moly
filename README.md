@@ -16,3 +16,4 @@
 ## CS
 
 - [인터프리터 언어 vs 컴파일러 언어](cs/q1-interpreter-vs-compiler/README.md)
+- [빌드 vs 컴파일](cs/build-vs-compile.md)
