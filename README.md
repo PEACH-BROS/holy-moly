@@ -4,6 +4,7 @@
 ## 자바
 
 - [원시타입 VS 참조타입](java/q1-primitive-vs-reference/README.md)
+- [JVM](java/q2-jvm/README.md)
 
 ## TDD
 
