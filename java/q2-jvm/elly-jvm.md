@@ -104,5 +104,6 @@ JVM이 수행할 명령어의 주소를 저장한다.
 >
 > [https://velog.io/@litien/JVM-%EA%B5%AC%EC%A1%B0](https://velog.io/@litien/JVM-구조)  
 > https://gbsb.tistory.com/2  
-> https://yaboong.github.io/java/2018/05/26/java-memory-management/
+> https://yaboong.github.io/java/2018/05/26/java-memory-management/  
+> https://minwan1.github.io/2018/06/06/2018-06-06-Java,JVM/
 
