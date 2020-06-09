@@ -19,4 +19,4 @@
 - [인터프리터 언어 vs 컴파일러 언어](cs/q1-interpreter-vs-compiler/README.md)
 - [빌드 vs 컴파일](cs/q2-build-vs-compile/README.md)
 - [프로세스 vs 쓰레드](cs/q3-process-vs-thread/README.md)
-- [싱글 쓰레드 vs 멀티 쓸데ㅡ](cs/q4-single-thread-vs-multi-thread/README.md)
+- [싱글 쓰레드 vs 멀티 쓰레드](cs/q4-single-thread-vs-multi-thread/README.md)
