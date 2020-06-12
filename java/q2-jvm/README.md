@@ -4,7 +4,7 @@
 
 [코일의 JVM](coyle-jvm.md)
 
-[덤벙 덤벙 엘리의 JVM](elly-jvm.md)
+[엘리의 JVM](elly-jvm.md)
 
 
 
