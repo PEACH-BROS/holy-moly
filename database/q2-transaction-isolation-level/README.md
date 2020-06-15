@@ -1,4 +1,4 @@
 # 트랜잭션 고립 수준에 대해 설명해보세요
 
 [비밥의 트랜잭션 고립 수준](bebop.md)
-
+[엘리의 트랜잭션 고립 수준](elly-transaction-isolation-level.md)
