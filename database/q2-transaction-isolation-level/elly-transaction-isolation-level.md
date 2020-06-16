@@ -8,8 +8,8 @@
 
 격리 수준은 크게 4가지로 나뉜다.
 
-- READ UNCOMMITED
-- READ COMMITED
+- READ UNCOMMITTED
+- READ COMMITTED
 - REPEATABLE READ
 - SERIALIZABLE
 
@@ -17,7 +17,7 @@
 
 아래로 내려갈수록 트랜잭션 간 고립 정도가 높아지며, 성능이 떨어진다. (일반적으로)
 
-일반적인 서비스에서는 READ COMMITED(ex. Oracle)나 REPEATABLE READI(ex. MySQL)를 많이 사용한다.
+일반적인 서비스에서는 READ COMMITTED(ex. Oracle)나 REPEATABLE READ(ex. MySQL)를 많이 사용한다.
 
 
 
@@ -27,7 +27,7 @@
 
 ## Dirty Read
 
-Commit되지 않은 정보를 읽으면서 발생하는 문제
+Commit되지 않은 정보를 읽으면서 발생하는 문제이다.
 
 
 
@@ -41,7 +41,7 @@ Commit되지 않은 정보를 읽으면서 발생하는 문제
 
 ## Phantom Read
 
-한 트랜잭션 내에 같은 쿼리를 두 번 실행했는데, 첫 번째 쿼리에서 없던 유령(Phantom) 레코드가 두 번째 쿼리에서 나타나는 현상
+한 트랜잭션 내에 같은 쿼리를 두 번 실행했는데, 첫 번째 쿼리에서 없던 유령(Phantom) 레코드가 두 번째 쿼리에서 나타나는 현상이다.
 
 
 
@@ -49,7 +49,7 @@ Commit되지 않은 정보를 읽으면서 발생하는 문제
 
 이제 격리 수준 4가지에 대해 살펴보자.
 
-## 레벨 0. READ UNCOMMITED
+## 레벨 0. READ UNCOMMITTED
 
 **어떤 트랜잭션의 변경내용이 COMMIT이나 ROLLBACK과 상관 없이 다른 트랜잭션에서 보여진다.**
 
@@ -70,7 +70,7 @@ Commit되지 않은 정보를 읽으면서 발생하는 문제
 
 
 
-## 레벨 1. READ COMMITED
+## 레벨 1. READ COMMITTED
 
 **어떤 트랜잭션의 변경 내용이 COMMIT되어야만, 다른 트랜잭션에서 조회할 수 있다.**
 
@@ -111,6 +111,8 @@ Oracle을 비롯해 가장 많이 선택되는 격리수준이다.
 
 **트랜잭션이 시작되기 전에 커밋된 내용에 대해서만 조회할 수 있는 격리수준이다.**
 
+(동일 트랜잭션 내에서 일관성을 보장한다.)
+
 
 
 레벨 1에서 발생했던 NON-REPEATABLE READ 부정합이 발생하지 않는다.
@@ -126,7 +128,7 @@ Oracle을 비롯해 가장 많이 선택되는 격리수준이다.
 
 
 
-Repeatable Read 격리수준에서는 트랜잭션이 시작된 시점의 데이터를 일관되게 보여주는 것을 보장해야 한다. 따라서, 한 트랜잭션의 실행시간이 길어질수록 해당 시간만큼 계속 멀티버전을 관리해야 하는 단점이 있다. 하지만 실제로 영향을 미칠 정도로 오래 지속되는 경우는 드물어서 Read Commited와 Repeatable Read의 성능 차이는 거의 없다고 보면 된다.
+Repeatable Read 격리수준에서는 트랜잭션이 시작된 시점의 데이터를 일관되게 보여주는 것을 보장해야 한다. 따라서, 한 트랜잭션의 실행시간이 길어질수록 해당 시간만큼 계속 멀티버전을 관리해야 하는 단점이 있다. 하지만 실제로 영향을 미칠 정도로 오래 지속되는 경우는 드물어서 Read Committed와 Repeatable Read의 성능 차이는 거의 없다고 보면 된다.
 
 
 
@@ -135,6 +137,8 @@ Repeatable Read 격리수준에서는 트랜잭션이 시작된 시점의 데이
 ### REPEATABLE READ에서 발생할 수 있는 데이터 부정합
 
 #### 1. UPDATE 부정합
+
+❗️REPEATABLE READ에서 어떤 트랜잭션이 락을 걸어도, UPDATE, 작업이 가능하다.
 
 ```sql
 START TRANSACTION; -- transaction id : 1
@@ -217,11 +221,48 @@ InnoDB에서 기본적으로 순수한 SELECT 작업은 아무런 잠금을 걸�
 
 
 
+read committed:
+
+repeatable read: innodb 기본 스토리지 엔진. innodb는 테이블 락이 아니라 로우 락이다. 그래서 . select한 것에 대해서는 락이 걸려 있고, insert, update, delete 작업에 대해서는 락이 안 걸린다.
+
+
+
+innodb 기본 설정. select한 것에 대해선 락이 걸려잇어서, 업데이트 불가능
+
+insert/delete는 락이 테이블단위로 안걸려있으니까 선행 트랜잭션이 커밋하는 순간 샐랙한다. 로우 수가 불일치하니까에러발생
+
+
+
+serializable: 한 트랜잭션이 진행중일 때 읽기/쓰기락 둘 다 걸림
+
+
+
+
+
+
+
 > Redo와 Undo
 
-Redo : 다시 하다. (복구의 역할. 복구할 때 사용자가 했던 작업을 그대로 다시 진행한다.)
+**Redo** : 다시 하다. (복구의 역할. 복구할 때 사용자가 했던 작업을 그대로 다시 진행한다.)
 
-Undo: 원상태로 돌리다 (작업 Rollback, 복구할 때 사용자의 작업을 반대로 진행한다.)
+**Undo**: 원상태로 돌리다 (작업 Rollback, 복구할 때 사용자의 작업을 반대로 진행한다.)
+
+**Undo 로그?**
+
+UPDATE, DELETE 문장으로 데이터를 변경했을 때, 변경되기 전의 데이터를 보관하는 곳.
+
+`UPDATE member SET name = '홍길동' WHERE member_id = 1;`
+
+이 문장이 실행되면 트랜잭션을 Commit하지 않아도 실제 데이터 파일(데이터, 인덱스 버퍼) 내용은 `홍길동`으로 변경된다. 그리고 변경되기 전의 값이 `김길동` 이었다면, Undo 영역에는 `김길동` 이라는 값이 백업되는 것이다. 이 상태에서 사용자가 Commit하게 되면 현재 상태(`홍길동`)가 그대로 유지되고, Rollback하게 되면 Undo 영역의 백업된 데이터를 다시 데이터 파일로 복구한다.
+
+
+
+**왜 Undo 영역이 필요할까?**
+
+1. 트랜잭션의 Rollback 대비용
+2. 트랜잭션의 격리 수준을 유지하면서 높은 동시성 제공. (특히 Repeatable Read에서)
+
+
 
 Commit되지 않은 상태에서 세션이 비정상 종료되었다면 Undo를 이용해 Rollback한다.
 
