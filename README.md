@@ -5,7 +5,7 @@
 
 - [원시타입 VS 참조타입](java/q1-primitive-vs-reference/README.md)
 - [JVM](java/q2-jvm/README.md)
-- [컬렉션: hash VS tree](java/q3-collection-hash-vs-tree.md)
+- [컬렉션: hash VS tree](java/q3-collection-hash-vs-tree/README.md)
 
 ## TDD
 
