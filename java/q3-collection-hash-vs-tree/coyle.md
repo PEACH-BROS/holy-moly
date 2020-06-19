@@ -7,7 +7,7 @@
 ### 해쉬 
 
 - 검색 성능 O(1)
-- 데이터의 양에  관계 없이 바른 성능을 기대할 수 있다.
+- ~~*데이터의 양에  관계 없이 바른 성능을 기대할 수 있다.*~~ **- 구라**
 
 
 
@@ -65,7 +65,7 @@ B-TREE는 노드의 삽입, 삭제 후에도 균형 트리 유지로 균등한 �
 
 만약 HashMap의 사이즈가 100이라면 hash funcion은 0~99 값을 생성해서 값이 저장될 장소를 지정한다.
 
-HashMap의 사이즈가 적절히 선정된 경우에는 Insert, Look up은 O(1)이다. (Collisiondㅣ 별로 없는 경우 )
+HashMap의 사이즈가 적절히 선정된 경우에는 Insert, Look up은 O(1)이다. (Collision이 별로 없는 경우 )
 
 
 
@@ -83,7 +83,7 @@ Collision이 없는 경우 HashMap의 O(1)은 왠만해서는 O(log N)보다 좋
 
 
 
-마지막으로 B-Tree의 경우 Sort가 되어 있지만, HashMap의 경우 Sorting이 안되어 있어 Sorting 관련 로직이 피요한 경우 Tree가 더 빠를 수 있다.
+마지막으로 B-Tree의 경우 Sort가 되어 있지만, HashMap의 경우 Sorting이 안 되어 있어 Sorting 관련 로직이 필요한 경우 Tree가 더 빠를 수 있다.
 
 
 
