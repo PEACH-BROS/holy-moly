@@ -1,5 +1,9 @@
 # Multi Thread에 대해 설명해주세요.
 
+[비밥의 Thread-Safe](bebop.md)
+
+---
+
 ## 1-1. Thread-safe란 무엇인가요?
 
 ## 1-2. 그럼 자바에서 공유 자원에 대해 어떻게 thread-safe 하게 할까요?
