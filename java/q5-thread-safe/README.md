@@ -2,6 +2,12 @@
 
 [비밥의 Thread-Safe](bebop.md)
 
+
+
+[엘리의 Thread-Safe](elly-thread-safe.md)
+
+
+
 ---
 
 ## 1-1. Thread-safe란 무엇인가요?

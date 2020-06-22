@@ -53,9 +53,11 @@ GC를 실행하는 쓰레드를 제외한 나머지 쓰레드는 모두 작업�
 
 ---
 
-## GC의 작동 순서
+# GC의 작동 과정
 
-1. **Mark**: GC는 Stack의 모든 변수를 스캔하면서 각각 어떤 객체를 참조하고 있는지 찾아서 마킹한다. Reachable한 Object와 Unreachable한 Object를 구분해 마킹한다.
+1. **Mark**: GC는 Stack의 GC Root로부터 모든 변수를 스캔하면서 각각 어떤 객체를 참조하고 있는지 찾아서 마킹한다. Reachable한 Object를 마킹한다!
+
+   ❗️GC Root로부터 찾아 들어가나? 아님 모든 heap 영역을 처음부터 탐색하나?
 
    ![image](https://user-images.githubusercontent.com/19922698/85224883-61192f80-b408-11ea-822c-6e71b18e2705.png)
 
@@ -73,7 +75,7 @@ GC를 실행하는 쓰레드를 제외한 나머지 쓰레드는 모두 작업�
 
 
 
-## GC의 작동 과정
+# GC의 작동 순서
 
 ![image](https://user-images.githubusercontent.com/19922698/85226514-cffb8600-b412-11ea-91a5-073d2a89b0f7.png)
 
@@ -120,6 +122,42 @@ GC를 실행하는 쓰레드를 제외한 나머지 쓰레드는 모두 작업�
 #### 6. Promotion이 반복되면 Old Generation이 가득 차게 되고, Major GC가 일어난다.
 
 ![image](https://user-images.githubusercontent.com/19922698/85227384-14d5eb80-b418-11ea-8268-33b1d184d8ab.png)
+
+
+
+# GC의 종류
+
+#### 1. Serial GC
+
+Java SE 5, 6에서의 기본 가비지 컬렉터. 싱글 쓰레드 환경에 맞게 설계되었다. Young/Old Generation에 대한 GC과정이 싱글 쓰레드로 동작하기 때문에, 다른 GC에 비해 Stop-The-World 시간이 길다.
+
+#### 2. Parallel GC
+
+Serial GC와 같지만, Young 영역의 GC과정을 멀티 쓰레드로 수행한다. 그래서 Serial GC에 비해 Stop-The-World 시간이 줄어든다.
+
+![image](https://user-images.githubusercontent.com/19922698/85227976-954a1b80-b41b-11ea-9523-89a831ee2156.png)
+
+#### 3. Parallel Old GC
+
+Young/Old 영역 모두 멀티 쓰레드로 수행한다. Parallel GC보다 더 빠른 성능을 보여준다.
+
+
+
+#### 4. CMS GC (Concurrent Mark Sweep)
+
+Old 영역에 대한 GC이며, Young 영역은 Parallel GC와 같은 방식으로 동작한다. Stop-The-World 시간을 최소화하기 위해 설계되었다. 따라서, 다른 GC와 달리 **Compact 과정이 없다.**
+
+
+
+#### 5. G1 GC (Garbage First GC)
+
+
+
+
+
+
+
+
 
 
 
