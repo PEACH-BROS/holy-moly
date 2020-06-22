@@ -1,6 +1,6 @@
 # Garbage Collector
 
-## Reachbaility
+## Reachability
 
 GC는 JVM 힙영역에서 사용중이지 않은 객체를 식별해서 삭제하는 프로세스이다.
 
