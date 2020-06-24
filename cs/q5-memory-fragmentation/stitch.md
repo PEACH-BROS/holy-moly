@@ -2,7 +2,7 @@
 
 ## 메모리 단편화 : *Memory Framentation*
 
-> 기억 장치의 빈 공간 또는 자료가 여러 개의 조각으로 나뉘는 현상을 말한다. 이 현상은 기억장치의 사용 가능한 공간을 줄이거나, 읽기와 쓰기의 수행속도를 늦추는 문제점을 야기한다 - [wikipedia]([https://ko.wikipedia.org/wiki/%EB%8B%A8%ED%8E%B8%ED%99%94](https://ko.wikipedia.org/wiki/단편화))
+> 기억 장치의 빈 공간 또는 자료가 여러 개의 조각으로 나뉘는 현상을 말한다. 이 현상은 기억장치의 사용 가능한 공간을 줄이거나, 읽기와 쓰기의 수행속도를 늦추는 문제점을 야기한다 - [wikipedia](https://ko.wikipedia.org/wiki/단편화))
 
 단편화의 종류는 아래와 같음.
 
