@@ -16,7 +16,7 @@
 ## 웹
 
 - [RESTful이란?](web/q1-restful/README.md)
-- [서브넷](web/q2-subnet/README.md)
+- [Subnet](web/q2-subnet/README.md)
 
 ## CS
 
