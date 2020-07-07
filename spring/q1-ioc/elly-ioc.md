@@ -86,5 +86,5 @@ IoC 개념은 너무 일반적인 용어라 사람들을 헷갈리게 한다. �
 
 > 참고
 >
-> [마틴 파울러의 IoC와 DI](https://black-jin0427.tistory.com/194)
+> [마틴 파울러의 IoC와 DI](https://black-jin0427.tistory.com/194)  
 > 백기선의 예제로 배우는 스프링 프레임워크 강의
