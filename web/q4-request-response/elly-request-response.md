@@ -18,6 +18,8 @@
 
 6. 브라우저 캐시에 없으면 **hosts 파일**(운영체제가 호스트 이름을 IP주소에 맵핑할 때 사용하는 컴퓨터 파일. 플레인 텍스트 파일이다.)을 참조한다.
 
+   ❗️사내 개발용 IP를 hosts 파일 안에 넣어두지 않으면 접근을 못 하는 경우도 있다.
+
 7. hosts 파일에도 없으면 DNS 서버를 조회한다. `Local DNS 서버`에 www.google.com를 요청한다.
 
    ![image](https://user-images.githubusercontent.com/19922698/86616813-5c03d500-bff1-11ea-9baa-9bc09c0973d4.png)
