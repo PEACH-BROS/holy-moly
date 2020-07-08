@@ -12,7 +12,7 @@ ex. `@Service`, `@Controller`, `@Repository`, `@RestController`
 
 결국 Configuration이다. 즉, Bean을 등록하는 자바 설정 파일이다.
 
-![image-20200709000532023](/Users/yebin/Library/Application Support/typora-user-images/image-20200709000532023.png)
+![image](https://user-images.githubusercontent.com/19922698/86936383-e75ba280-c178-11ea-814d-4c50d9ebe608.png)
 
 `spring.factories` 내부에 여러 Configuration들이 있고, 조건에 따라 Bean으로 등록한다.
 
