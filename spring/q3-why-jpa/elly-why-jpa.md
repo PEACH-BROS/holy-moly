@@ -69,9 +69,11 @@ public interface EntityManager {
 
 ### MyBatis?
 
-SQL Mapper의 일종. JDBC를 좀 더 편하게 사용할 수 있도록 객체를 SQL 구문을과 자바 메소드와 매핑해준다.
+ORM이 아닌 SQL Mapper의 일종. JDBC를 좀 더 편하게 사용할 수 있도록 객체를 SQL 구문을과 자바 메소드와 매핑해준다.
 
 SQL Mapper는 직접 SQL을 명시해줘야 한다.
+
+❗️ `ORM`은 객체를 매핑하고, `SQL Mapper`는 쿼리를 매핑한다. (p79)
 
 반복적인 코드 문제는 해결되지 않는다.
 
@@ -84,4 +86,5 @@ SQL Mapper는 직접 SQL을 명시해줘야 한다.
 > https://gmlwjd9405.github.io/2019/08/03/reason-why-use-jpa.html  
 > Jason의 JPA 핸즈온  
 > https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/  
-> https://gmlwjd9405.github.io/2018/12/25/difference-jdbc-jpa-mybatis.html
+> https://gmlwjd9405.github.io/2018/12/25/difference-jdbc-jpa-mybatis.html  
+> 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
