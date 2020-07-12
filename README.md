@@ -25,6 +25,7 @@
 - [IOC](spring/q1-ioc/README.md)
 - [컴포넌트 스캔](spring/q2-component-scan/README.md)
 - [why JPA](spring/q3-why-jpa/README.md)
+- [AOP](spring/q4-aop/README.md)
 
 ## CS
 
