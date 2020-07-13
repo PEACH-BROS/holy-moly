@@ -8,7 +8,7 @@
 - [컬렉션: hash VS tree](java/q3-collection-hash-vs-tree/README.md)
 - [GC](java/q4-garbage-collector/README.md)
 - [자바의 Thread Safe](java/q5-thread-safe/README.md)
-- [Checked Exception VS Unchecked Exception)(java/q6-checked-unchecked-exception/README.md)
+- [Checked Exception VS Unchecked Exception](java/q6-checked-unchecked-exception/README.md)
 
 ## TDD
 
