@@ -2,7 +2,7 @@
 
 :rocket: 나의 답변
 
-Checked Exception은 컴파일 시에 체크가 가능한 익셉션이기 때문에 Checked라고 부르고, Unchecked Exception은 런타임 시에 발생하는 익셉션입니다. Checked Exception은 반드시 처리가 필요합니다.
+~~Checked Exception은 컴파일 시에 체크가 가능한 익셉션이기 때문에 Checked라고 부르고, Unchecked Exception은 런타임 시에 발생하는 익셉션입니다.~~ Checked Exception은 컴파일 타임에 반드시 처리해줘야 하는 익셉션입니다. RuntimeException을 상속받는 게 Unchecked Exception이다.
 
 ---
 
@@ -35,7 +35,7 @@ public void saveBook(BookRequest bookRequest) {
 }
 ```
 
-🤔 그럼 @Transactional 을 붙인다고 다 롤백이 되는게 아니었네?
+🤔 그럼 @Transactional 을 붙인다고 다 롤백이 되는게 아니었네? *ㅇㅇ아니다! 명시적으로 써줘야 한다.*
 
 
 
