@@ -6,14 +6,13 @@
 
 ```java
 public class Car {
+    private static Car CAR = new Car("자동차1");
 
     private String name;
 
     private Car(String name) {
         this.name = name;
     }
-
-    private static Car CAR = new Car("자동차1");
 
     public static Car getInstance() {
         return CAR;
@@ -32,14 +31,13 @@ public class Car {
 
 ```java
 public class Car {
+    private static Car CAR;
 
     private String name;
 
     private Car(String name) {
         this.name = name;
     }
-
-    private static Car CAR;
 
     public static Car getInstance() {
       	if (CAR == null) {
