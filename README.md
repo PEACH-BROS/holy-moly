@@ -29,6 +29,7 @@
 - [컴포넌트 스캔](spring/q2-component-scan/README.md)
 - [why JPA](spring/q3-why-jpa/README.md)
 - [AOP](spring/q4-aop/README.md)
+- [@Transactional](spring/q5-transactional/README.md)
 
 ## CS
 
