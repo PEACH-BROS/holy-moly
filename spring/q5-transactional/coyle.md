@@ -30,7 +30,7 @@
 
 
 
-## @Transaction
+## @Transactional
 
 
 
@@ -107,9 +107,6 @@ public void something (int a) {
 
 
 
-**
-**
-
 **▶ MANDATORY**
 
  \- REQUIRED와 비슷하게 이미 시작된 트랜잭션이 있으면 참여한다. 
@@ -120,9 +117,6 @@ public void something (int a) {
 
 
 
-**
-**
-
 **▶ REQUIRES_NEW**
 
  \- 항상 새로운 트랜잭션을 시작한다.
@@ -131,16 +125,11 @@ public void something (int a) {
 
 
 
-**
-**
-
 **▶ NOT_SUPPORTED**
 
  \- 트랜잭션을 사용하지 않게 한다.
 
  \- 이미 진행 중인 트랜잭션이 있으면 보류시킨다.
-
-
 
 
 
@@ -168,7 +157,7 @@ public void something (int a) {
 
 
 
-\1. 어떤 작업을 진행하는 중 로그는 꼭 DB에 저장해야 할 때
+1. 어떤 작업을 진행하는 중 로그는 꼭 DB에 저장해야 할 때
 
 이 로그를 저장하는 작업이 실패한다고 메인 작업의 트랜잭션까지는 롤백되버린다면 특히 쇼핑몰에서 고객 주문작업 등의 경우 매출 하락까지도 발생할 수 있는 중요한 문제이다.
 
