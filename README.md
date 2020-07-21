@@ -22,6 +22,7 @@
 - [Subnet](web/q2-subnet/README.md)
 - [HTTPS 동작과정](web/q3-https/README.md)
 - [웹 요청-응답 과정](web/q4-request-response/README.md)
+- [3-Way Handshake](web/q5-3-way-handshake/README.md)
 
 ## 스프링
 
@@ -44,3 +45,4 @@
 - [InnoDB vs MyISAM](database/q1-innodb-vs-myisam/README.md)
 - [트랜잭션 고립수준](database/q2-transaction-isolation-level/README.md)
 - [ACID](database/q3-acid/README.md) 
+- [Sharding](database/q4-sharding/README.md)
