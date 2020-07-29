@@ -40,6 +40,7 @@
 - [싱글 쓰레드 vs 멀티 쓰레드](cs/q4-single-thread-vs-multi-thread/README.md)
 - [메모리 단편화](cs/q5-memory-fragmentation/README.md)
 - [데드락과 해결방법](cs/q6-dead-lock/README.md)
+- [스케쥴링](cs/q7-scheduling/README.md)
 
 ## 데이터베이스
 
