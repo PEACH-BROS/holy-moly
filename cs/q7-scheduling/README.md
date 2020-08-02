@@ -4,3 +4,5 @@
 
 [비밥의 스케쥴링](bebop.md)
 
+[엘리의 스케줄링](elly-scheduling.md)
+
