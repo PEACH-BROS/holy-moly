@@ -49,3 +49,4 @@
 - [트랜잭션 고립수준](database/q2-transaction-isolation-level/README.md)
 - [ACID](database/q3-acid/README.md) 
 - [Sharding](database/q4-sharding/README.md)
+- [Primary Key VS Unique Key](database/q5-pk-vs-uk/README.md)
