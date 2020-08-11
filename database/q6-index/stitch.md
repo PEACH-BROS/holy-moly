@@ -152,3 +152,5 @@ public class Region{
 > [DB 인덱스의 구조는 어떻게 되어있나요? 인덱스는 언제 적용해야하나요?](https://jeong-pro.tistory.com/114)
 >
 > [DB Index란?](https://brownbears.tistory.com/57)
+>
+> [클러스터링 인덱스](https://12bme.tistory.com/149?category=682920)
