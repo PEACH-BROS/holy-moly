@@ -54,3 +54,5 @@
 - [ACID](database/q3-acid/README.md) 
 - [Sharding](database/q4-sharding/README.md)
 - [Primary Key VS Unique Key](database/q5-pk-vs-uk/README.md)
+- []
+- [갱신 이상](database/q8-update-anomaly/README.md)
