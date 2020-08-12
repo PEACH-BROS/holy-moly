@@ -78,3 +78,14 @@ B-Tree는 인덱스를 이루고 있는 자료구조의 일종이다.
 
 `To Be Continue...`
 
+
+
+## 참고 링크
+
+> [B-Tree - JI-DUM](http://www.jidum.com/jidums/view.do?jidumId=157)
+>
+> [B+Tree - JI-DUM](http://www.jidum.com/jidums/view.do?jidumId=156#)
+>
+> [B-Tree 개념 정리 - Jlog](https://hyungjoon6876.github.io/jlog/2018/07/20/btree.html)
+>
+> [[MySQL]B-Tree, B+Tree란?(인덱스와 연관지어서) - Carry On Programming](https://zorba91.tistory.com/293)
