@@ -43,6 +43,10 @@
 - [데드락과 해결방법](cs/q6-dead-lock/README.md)
 - [스케쥴링](cs/q7-scheduling/README.md)
 
+## 자료구조
+
+- [B Tree](data-structure/q1-b-tree/README.md)
+
 ## 데이터베이스
 
 - [InnoDB vs MyISAM](database/q1-innodb-vs-myisam/README.md)
