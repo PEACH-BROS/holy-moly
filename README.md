@@ -42,6 +42,7 @@
 - [메모리 단편화](cs/q5-memory-fragmentation/README.md)
 - [데드락과 해결방법](cs/q6-dead-lock/README.md)
 - [스케쥴링](cs/q7-scheduling/README.md)
+- [동기와 비동기](cs/q8-sync-async/README.md)
 
 ## 자료구조
 
@@ -54,5 +55,6 @@
 - [ACID](database/q3-acid/README.md) 
 - [Sharding](database/q4-sharding/README.md)
 - [Primary Key VS Unique Key](database/q5-pk-vs-uk/README.md)
-- []
+- [인덱스](database/q6-index/README.md)
+- [쿼리 실행 순서](database/q7-query-execution-order/README.md)
 - [갱신 이상](database/q8-update-anomaly/README.md)
