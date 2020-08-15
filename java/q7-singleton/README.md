@@ -2,7 +2,7 @@
 
 [비밥의 Singleton](bebop.md)
 
-엘리의 Singleton](Elly-singletom.md)
+[엘리의 Singleton](elly-singleton.md)
 
 [스티치의 Singleton](stitch.md)
 
