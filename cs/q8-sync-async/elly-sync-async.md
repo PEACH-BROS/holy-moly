@@ -4,44 +4,11 @@
 
 이벤트를 자신이 *직접* 처리. (확인의 주체가 유저 프로세스이며, 다 될 때까지 기다리거나 스스로 확인)
 
-ex. 계좌 송금
-
-![image](https://user-images.githubusercontent.com/19922698/90335239-6496f480-e00e-11ea-857c-0239a09be443.png)
-
-```
-A가 B에게 10,000원을 전송할 예정.
-
-1. A의 계좌에서 10,000원을 인출할 예정이다.
-2. B의 계좌로 10,000원을 전송한다.
-3. B의 계좌에 10,000원을 더한다.
-4. B는 A에게 10,000원을 받았다고 전송한다.
-5. A의 계좌에서 -10,000원을 한다.
-   B의 계좌에서 +10,000원을 한다.
-```
-
-
-
-자바의 동기화 처리
-
-1. synchronized
-
-   : 동기화 영역을 표시한다. 
-
-   : 그 영역에는 하나의 시점에 하나의 쓰레드만이 접근할 수 있다.
-
-   블록에 접근을 시도하는 다른 쓰레드들은 블록 안에 쓰레드가 실행을 마치고 블록을 벗어날 때까지 **블록 상태**가 된다.
-
-2. volatile
-
-3. 
-
 <br/>
 
 ## 비동기 asynchronous
 
 이벤트 핸들러 (callback)에 의해 처리. (callback 함수가 호출되기까지 다른 작업 가능)
-
-
 
 ex. 시험날의 학생과 선생님
 
@@ -61,33 +28,57 @@ ex. 시험날의 학생과 선생님
 
 <br/>
 
+---
+
 ### 🤔 Sync/Async와 Blocking/Non-Blocking 뭐가 다르지?
 
 ### : 관심사가 다르다.
 
 Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘은 관심사가 다르다.
 
-**Blocking/Non-Blocking**
+### **Blocking/Non-Blocking**
 
->  호출된 함수가 바로 return하느냐 마느냐. 제어권을 
+>  호출된 함수가 바로 return하느냐 마느냐. (제어권을 돌려받느냐 마느냐)
 
-호출된 함수가 자신의 작업을 모두 마칠 때까지 호출한 곳에 제어권을 넘겨주지 않고 대기하게 만들면 Blocking
+<br/>
+
+호출된 함수가 자신의 작업을 모두 마칠 때까지 호출한 곳에 *제어권을 넘겨주지 않고 대기하게 만들면 Blocking*
 
 ❗학생이 시험지를 선생님에게 건넨 후 가만히 앉아 채점이 끝나기만을 기다린다. -> 학생은 **블록 상태**이다.
 
 <br/>
 
-호출된 함수가 바로 리턴해서 호출한 곳에 제어권을 넘겨주고, 다른 일을 할 기회를 줄 수 있으면 Non-Blocking
+호출된 함수가 바로 리턴해서 호출한 곳에 *제어권을 넘겨주고, 다른 일을 할 기회를 줄 수 있으면 Non-Blocking*
 
-❗️ 학생이 시험지를 건넨 후 채점을 기다리지 않고 다른 일도 한다면 학생은 **논블록 상태**이다.
+❗️ 학생이 시험지를 선생님께 건넨 후 채점을 기다리지 않고 다른 일도 한다면 학생은 **논블록 상태**이다.
+
+<br/>
+
+### **Sync/Async**
+
+> 호출된 함수의 작업 완료 여부를 누가 신경쓰냐
+
+<br/>
+
+호출된 함수 작업 완료 후 return을 기다리거나, 바로 return받더라도 작업 완료 여부를 *호출한 곳에서 계속 신경쓰는 방식이 Synchronous*
+
+<br/>
+
+호출된 함수에게 callback을 전달해서 그쪽의 작업이 완료된 후 전달받은 callback을 실행하고, *호출한 곳은 신경쓰지 않으면 Asynchronous*
+
+​	- 비동기 작업(호출된 함수의 작업)을 다른 쓰레드에서 진행하고, 이를 전달받은 callback을 Future 객체에 담을 수 있다.
 
 
 
 
+
+🤔 관심사에 따라 같은 현상에 대해서도 Sync 또는 Block이라고 말 할 수 있는걸까?
+
+<br/>
 
 ---
 
-카페에서 커피를 주문하는 것을 예로 들어보자.
+### 카페에서 커피를 주문하는 것을 예로 들어보자.
 
 1. 커피를 타달라는 요청이 들어왔다.
 
@@ -108,8 +99,8 @@ Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘�
 
 > 참고
 >
+> https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/  
 > https://brainbackdoor.tistory.com/26  
 > https://parkcheolu.tistory.com/15  
 > https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/  
->
 
