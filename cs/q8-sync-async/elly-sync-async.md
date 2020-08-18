@@ -70,8 +70,6 @@ Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘�
 
 
 
-
-
 🤔 관심사에 따라 같은 현상에 대해서도 Sync 또는 Block이라고 말 할 수 있는걸까?
 
 <br/>
@@ -93,9 +91,7 @@ Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘�
 
 
 
-
-
-
+<br/>
 
 > 참고
 >
