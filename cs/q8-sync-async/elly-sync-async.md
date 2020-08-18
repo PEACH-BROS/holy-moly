@@ -8,23 +8,7 @@
 
 ## 비동기 asynchronous
 
-이벤트 핸들러 (callback)에 의해 처리. (callback 함수가 호출되기까지 다른 작업 가능)
-
-ex. 시험날의 학생과 선생님
-
-![image](https://user-images.githubusercontent.com/19922698/90335287-f0a91c00-e00e-11ea-8116-0b16ec950cb9.png)
-
-```
-1. 학생이 시험문제를 푼다.
-2. 선생님에게 시험지를 건낸다.
-3. 선생님은 채점을 한다.
-4. 채점이 끝나면 채점된 시험지를 학생에게 건넨다. (그 동안 학생은 밥도 먹고, 잠도 잔다.)
-5. 학생은 시험 결과를 확인한다.
-```
-
-학생과 선생님은 "시험지"라는 연결고리가 있지만, 시험지에 행하는 행위(목적)는 서로 다르다. 서로의 행위가 다르기 때문에 둘의 작업 처리 시간을 일치하지 않고, 일치하지 않아도 된다.
-
-
+이벤트 핸들러 (**callback**)에 의해 처리. (callback 함수가 호출되기까지 다른 작업 가능)
 
 <br/>
 
@@ -80,7 +64,7 @@ Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘�
 
 1. 커피를 타달라는 요청이 들어왔다.
 
-- 이 떄, 커피가 있으면 타준다. (block/non-block 모두)
+- 이 때, 커피가 있으면 타준다. (block/non-block 모두)
 
 - 커피가 없는 경우, **block**: "잠깐만요" 하고 사러 간다.
 
@@ -88,6 +72,14 @@ Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘�
 
 - **동기**: 커피가 타졌는지 안 타졌는지 내가 확인한다.
 - **비동기**: 벨이 울리면 받으러 간다.
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/19922698/90541412-8e424e00-e1bd-11ea-9474-24efaa436be7.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/19922698/90542055-8505b100-e1be-11ea-9272-48b18f7df398.png)
 
 
 
@@ -98,5 +90,4 @@ Sync와 Blocking이 비슷하고, Async와 Non-Blocking이 비슷하지만, 둘�
 > https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/  
 > https://brainbackdoor.tistory.com/26  
 > https://parkcheolu.tistory.com/15  
-> https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/  
 
